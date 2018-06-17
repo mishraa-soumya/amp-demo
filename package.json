@@ -1,0 +1,36 @@
+{
+  "name": "amp-demo",
+  "version": "1.0.0",
+  "description": "AMP Demo Project for AMP TALK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect index.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-dot-engine": "^1.0.7",
+    "http": "0.0.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumya18/amp-demo.git"
+  },
+  "author": "Soumya Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumya18/amp-demo/issues"
+  },
+  "homepage": "https://github.com/soumya18/amp-demo#readme",
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
