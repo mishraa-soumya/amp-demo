@@ -1,0 +1,9 @@
+.list-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0.5em;
+    border: 1px solid #c5c5c5;
+}
+.products{
+    /* width: 50%; */
+}
