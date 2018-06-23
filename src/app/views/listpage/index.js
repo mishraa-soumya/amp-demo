@@ -2,9 +2,14 @@ import fetchData from '../../common/fetchData';
 
 export default function showProductList(req, res, next) {
     let productData = {};
-    
+    console.log(`request params is ${req}`);
     async function getData() {
         let apiUrl = 'https://amptalk-api-555fd.firebaseapp.com/productlist.json';
+        
+        if(req.query.color && req.query.color){
+            let color = req.query.color.toLowerCase();
+            apiUrl = 'https://amptalk-api-555fd.firebaseapp.com/productlist_'+color+'.json';
+        }
         let reqOptions = {
             type: 'GET',
             url: apiUrl,
