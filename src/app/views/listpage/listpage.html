@@ -11,15 +11,15 @@ layout: '../layouts/main.html'
                 <span>({{= model.productData.listContent.count }})</span>    
             </div>
             <div class="list-filter">
-                <select class="mt1 ampstart-input"
-                on="change:AMP.setState({filterOptions: allProducts.items.filter(a => event.value == 'all' ? true : a.color == event.value)})">
-                    <option value="all"
-                    selected="">All</option>
-                    <option value="red">red</option>
-                    <option value="green">green</option>
-                    <option value="yellow">yellow</option>
-                    <option value="orange">orange</option>
-                </select>
+                <span class="hide" [class]="(ampState.selectedColor) ? 'show': 'hide'">
+                    Selected Color
+                </span>
+                <select id="filterOption" on="change:AMP.navigateTo(url=event.value)">
+                    <option>Select a color</option>
+                    {{~ model.productData.filterOptions :value:index}}
+                        <option value=http://localhost:7000/amp/list?color={{= value.label}}>{{= value.label}}</option>
+                    {{~}}
+            </select>
             </div>
         </div>
             <div class="list-content">
@@ -38,7 +38,7 @@ layout: '../layouts/main.html'
 
                         </div>
                     </div>
-                {{~}}
+                {{~}} 
             </div>
             
         <!-- Closing of If condition -->
