@@ -1,8 +1,27 @@
+.list-title{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 0.5em;
+}
+.list-title h3{
+    display: flex;
+    justify-content: flex-end;
+}
 .list-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 0.5em;
     border: 1px solid #c5c5c5;
+}
+.heading-bar{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.list-filter{
+    display: flex;
+    justify-content: center;
 }
 .products{
     /* width: 50%; */

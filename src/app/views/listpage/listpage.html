@@ -5,11 +5,23 @@ layout: '../layouts/main.html'
     <div class="list-wrapper">
         <!-- Starting of If condition -->
         {{? model.productData.listContent }}
-            
+        <div class="heading-bar">
             <div class="list-title">
-                <h1>{{= model.productData.listContent.label }}/h1>
-                <span>( {{= model.productData.listContent.count }} )</span>    
+                <h3>{{= model.productData.listContent.label }}</h3>
+                <span>({{= model.productData.listContent.count }})</span>    
             </div>
+            <div class="list-filter">
+                <select class="mt1 ampstart-input"
+                on="change:AMP.setState({filterOptions: allProducts.items.filter(a => event.value == 'all' ? true : a.color == event.value)})">
+                    <option value="all"
+                    selected="">All</option>
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="yellow">yellow</option>
+                    <option value="orange">orange</option>
+                </select>
+            </div>
+        </div>
             <div class="list-content">
                 {{~ model.productData.listContent.data :value:index}}
                     <div class="products">

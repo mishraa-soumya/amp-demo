@@ -23,7 +23,7 @@ export default function showProductList(req, res, next) {
 
     function OnSuccess(){
         if(Object.keys(productData).length > 0 && productData.hasOwnProperty('listContent')) {
-            console.log("listdata",JSON.stringify(productData));
+            // console.log("listdata",JSON.stringify(productData));
             res.render('listpage/listpage.html', { productData });
         }
     }
