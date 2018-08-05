@@ -23,7 +23,7 @@ layout: '../layouts/main.html'
             </div>
         </div>
             <div class="list-content">
-                {{~ model.productData.listContent.data :value:index}}
+                {{~ model.productData.listContent.products :value:index}}
                     <div class="products">
                         <div class="image-view">
                             <amp-img
@@ -34,14 +34,10 @@ layout: '../layouts/main.html'
                             >
                             </amp-img>
                         </div>
-                        <div class="info-view">
-
-                        </div>
                     </div>
-                {{~}} 
+                {{~}}
             </div>
-            
         <!-- Closing of If condition -->
-        {{? }} 
+        {{? }}
     </div>
 #}}
