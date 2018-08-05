@@ -1,0 +1,16 @@
+# create Resource Group
+
+az group create --name amp-node-app --location westus
+az configure --defaults group=amp-node-app location westus
+
+# create an app service plan
+
+az appservice plan create --name amp-node-plan --sku F1
+
+# Create the website
+
+az webapp create --name amp-node-app --plan amp-node-plan --runtime "node|8.9"
+
+# Deploy & Run the Website
+
+az webapp browse --name amp-node-app
